@@ -28,7 +28,7 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900");
 /* 
 ---------------------------------------------
 reset
@@ -231,7 +231,20 @@ body {
   font-size: 13px;
   color: #fff;
   background: #454ade;
-  background: linear-gradient(-145deg, #454ade 0%, #8084f0 100%);
+  background: linear-gradient(-145deg, #918ef4 0%, #98b9f2 100%);
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.main-button-gradient {
+  font-size: 13px;
+  color: #fff;
+  background: #454ade;
+  background: linear-gradient(-145deg, #918ef4 0%, #98b9f2 100%);
   padding: 12px 30px;
   display: inline-block;
   border-radius: 5px;
@@ -241,12 +254,8 @@ body {
 }
 
 .main-button-gradient a:hover {
-  background: rgb(219, 138, 222);
-  background: linear-gradient(
-    -145deg,
-    rgba(219, 138, 222, 1) 0%,
-    rgba(246, 191, 159, 1) 100%
-  );
+  background: #594efc;
+  background: linear-gradient(-145deg, #594efc 0%, #9992fa 100%);
   opacity: 0.9;
 }
 
@@ -269,7 +278,7 @@ body {
 .text-button a {
   font-size: 14px;
   font-weight: 500;
-  color: #dc8cdb;
+  color: #101299;
   text-decoration: underline !important;
   transition: all 0.3s;
 }
@@ -489,7 +498,7 @@ header
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
   background: #fff;
-  color: #dc8cdb !important;
+  color: var(--colorprimary) !important;
   padding-left: 25px;
 }
 
@@ -629,7 +638,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #dc8cdb;
+  color: var(--colorprimary);
 }
 
 @media (max-width: 1200px) {
@@ -648,7 +657,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #dc8cdb !important;
+    color: var(--colorprimary) !important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -706,7 +715,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #dc8cdb !important;
+    color: var(--colorprimary) !important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -1112,9 +1121,17 @@ section.testimonials:after {
   z-index: 1;
 }
 
+.quienes-somos {
+  padding: 5rem 0.2rem;
+  background-image: url(../images/vectorquienesomos.png);
+  background-position: 100%;
+  background-size: cover;
+}
+
 .testimonials .item {
   border-radius: 15px;
   padding: 30px;
+  border: 0.2px rgb(172, 169, 169) solid;
   background-color: #fff;
   margin: 15px;
   transition: all 0.3s;
@@ -1132,7 +1149,6 @@ section.testimonials:after {
 }
 
 .testimonials .item h4 {
-  margin-top: 30px;
   font-size: 20px;
   font-weight: 900;
   position: relative;
@@ -1176,7 +1192,7 @@ contact us
 */
 
 section.contact-us {
-  background-image: url(../images/mask2.png);
+  background-image: url(../images/Mask\ group.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1231,7 +1247,7 @@ section.contact-us .contact-info h4 {
 
 section.contact-us .contact-info span {
   font-size: 15px;
-  color: #dc8cdb;
+  color: var(--colorprimary);
   font-weight: 700;
 }
 
@@ -1287,11 +1303,7 @@ section.contact-us #contact button {
   font-size: 13px;
   color: #fff;
   background: var(--colorprimary);
-  background: linear-gradient(
-    -145deg,
-    var(--colorprimary) 0%,
-    rgb(79, 71, 153) 100%
-  );
+  background: linear-gradient(-145deg, #918ef4 0%, #98b9f2 100%);
   padding: 12px 30px;
   display: inline-block;
   border-radius: 5px;
@@ -1324,13 +1336,13 @@ section.contact-us ul.social-icons li a {
   text-align: center;
   line-height: 44px;
   background-color: #fff;
-  color: #dc8cdb;
+
   border-radius: 50%;
   transition: all 0.5s;
 }
 
 section.contact-us ul.social-icons li a:hover {
-  background-color: #dc8cdb;
+  background-color: #594efc;
   color: #fff;
 }
 
@@ -1562,7 +1574,7 @@ section.our-team ul.nacc li .left-content span a {
 }
 
 section.our-team ul.nacc li .left-content span a:hover {
-  color: #dc8cdb;
+  color: #594efc;
 }
 
 section.our-team ul.nacc li .left-content .last-span a {
@@ -1842,12 +1854,8 @@ body {
     font-size: 62px;
   }
   .header-area {
-    background: rgb(29, 47, 146) !important;
-    background: linear-gradient(
-      -145deg,
-      rgb(78, 57, 194) 0%,
-      rgb(24, 18, 119) 100%
-    ) !important;
+    background: #918ef4 !important;
+    background: linear-gradient(-145deg, #918ef4 0%, #918ef4 100%) !important;
   }
   .services .owl-nav .owl-next {
     right: -70px;
@@ -1960,6 +1968,7 @@ body {
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     display: none;
   }
+
   section.our-courses ul.nacc li .left-image,
   section.our-team ul.nacc li .right-image {
     position: relative;
@@ -1988,7 +1997,7 @@ body {
     margin: 0px 5px;
   }
   section.our-team .naccs .menu div.active img {
-    border: 3px solid #dc8cdb;
+    border: 3px solid var(--colorprimary);
   }
   section.our-team .naccs .menu div h4,
   section.our-team .naccs .menu div span {
