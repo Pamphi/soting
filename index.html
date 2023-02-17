@@ -319,11 +319,15 @@ https://templatemo.com/tm-573-eduwell
         </p>
         <div class="d-flex justify-content-center">
           <form
-            action="#"
+            id="contact2"
             class="contact-form"
-            action="https://www.formingo.co/submit/c24d8155-06a1-4a90-87a1-21e1fb70edaa"
+            action="https://formspree.io/f/xyyawyoy"
             method="POST"
           >
+            <p
+              style="text-align: center; padding-bottom: 0.6rem"
+              id="my-form-status2"
+            ></p>
             <div class="">
               <label for="exampleFormControlInput1" class="form-label"
                 >whatsapp o correo electronico</label
@@ -331,7 +335,8 @@ https://templatemo.com/tm-573-eduwell
               <input
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="tu whatsapp o Email"
+                name="whatsapp"
+                placeholder="ej:3734449922 o contacto@soting.com.ar"
               />
             </div>
             <div class="">
@@ -340,8 +345,9 @@ https://templatemo.com/tm-573-eduwell
               >
               <input
                 class="form-control"
+                name="link"
                 id="exampleFormControlInput1"
-                placeholder="Link de tu instagram"
+                placeholder="ej: https://instagram.com/soting"
               />
             </div>
             <br />
@@ -354,6 +360,47 @@ https://templatemo.com/tm-573-eduwell
         </div>
       </div>
     </section>
+
+    <script>
+      var form2 = document.getElementById("contact2");
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status2 = document.getElementById("my-form-status2");
+        var data2 = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form2.method,
+          body: data2,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              status2.innerHTML =
+                "Gracias..!! Tu formulario se ha enviado correactamente, en breve nos comunicaremos contigo..!";
+              form2.reset();
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  status2.innerHTML = data["errors"]
+                    .map((error) => error["message"])
+                    .join(", ");
+                } else {
+                  status2.innerHTML =
+                    "Oops!  hubo un error al enviar el formulario, vuelve a intentarlo";
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            status2.innerHTML =
+              "Oops! There was a problem submitting your form";
+          });
+      }
+      form2.addEventListener("submit", handleSubmit);
+    </script>
+
     <style>
       .contact-detalles {
         text-align: center;
@@ -634,16 +681,16 @@ https://templatemo.com/tm-573-eduwell
                       <i class="fa fa-phone"></i>
                     </div>
                     <h4>whatsapp</h4>
-                    <span>3725449921</span>
+                    <span>3625456318</span>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="contact-info">
                     <div class="icon">
-                      <i class="fa fa-phone"></i>
+                      <i class="fa fa-phone" aria-hidden="true"></i>
                     </div>
-                    <h4>Mobile</h4>
-                    <span>3725449921</span>
+                    <h4>Telefono</h4>
+                    <span>3734449921</span>
                   </div>
                 </div>
               </div>
@@ -652,8 +699,7 @@ https://templatemo.com/tm-573-eduwell
           <div class="col-lg-4">
             <form
               id="contact"
-              action=""
-              action="https://www.formingo.co/submit/e2d243f7-9040-4dfb-91ff-0b936085c347"
+              action="https://formspree.io/f/mqkoqknr"
               method="POST"
             >
               <div class="row">
